@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Card Template</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    $("#name").text(localStorage.getItem("name") || "John Doe");
+// Repeat for other fields...
+
+    $("#resetBtn").click(function() {
+  $("#cardForm input").val("").removeClass("is-valid is-invalid");
+  updateCard(); // fallback to default values
+});
+
+  </script>
+
+  <style>
+         .is-valid {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+.is-invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+
+    body {
+      background: linear-gradient(to right, #6dd5ed, #2193b0);
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+    }
+ 
+    .card {
+      border-radius: 15px;
+      max-width: 400px;
+      background: #fff;
+    }
+
+    .card h2 {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .card h5 {
+      color: #666;
+      font-style: italic;
+    }
+
+    .social-icons a {
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #007bff;
+    }
+
+    .form-section {
+      margin-top: 30px;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="container py-5">
+  <div class="row justify-content-center align-items-start">
+    <div class="col-lg-5 mb-4">
+      <!-- Move your Business Card here -->
+    </div>
+    <div class="col-lg-5">
+      <!-- Move your Customization Form here -->
+    </div>
+  </div>
+</div>
+
+
+  <div class="container d-flex flex-column justify-content-center align-items-center py-5">
+
+    <!-- Business Card -->
+    <div class="card text-center p-4 shadow-lg">
+      <h2 id="name">John Doe</h2>
+      <h5 id="title">Software Engineer</h5>
+      <p><i class="fas fa-phone"></i> <span id="phone">+91 9876543210</span></p>
+      <p><i class="fas fa-envelope"></i> <span id="email">john@email.com</span></p>
+      <p><i class="fas fa-globe"></i> <span id="website">www.johndoe.com</span></p>
+
+      <div class="social-icons mt-3">
+        <a id="linkedin" href="https://linkedin.com" target="_blank" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a id="twitter" href="https://twitter.com" target="_blank" class="mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+        <a id="facebook" href="https://facebook.com" target="_blank" class="mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+      </div>
+    </div>
+
+    <!-- Customization Form -->
+    <div class="form-section bg-light p-4 rounded shadow mt-4">
+      <h4 class="mb-3">Customize Your Business Card</h4>
+      <form id="cardForm">
+        <div class="mb-2">
+          <input type="text" id="inputName" class="form-control" placeholder="Enter Name">
+        </div>
+        <div class="mb-2">
+          <input type="text" id="inputTitle" class="form-control" placeholder="Enter Title">
+        </div>
+        <div class="mb-2">
+          <input type="text" id="inputPhone" class="form-control" placeholder="Enter Phone">
+        </div>
+        <div class="mb-2">
+          <input type="email" id="inputEmail" class="form-control" placeholder="Enter Email">
+        </div>
+        <div class="mb-2">
+          <input type="text" id="inputWebsite" class="form-control" placeholder="Enter Website">
+        </div>
+        <div class="mb-2">
+          <input type="url" id="inputLinkedin" class="form-control" placeholder="LinkedIn URL">
+        </div>
+        <div class="mb-2">
+          <input type="url" id="inputTwitter" class="form-control" placeholder="Twitter URL">
+        </div>
+        <div class="mb-2">
+          <input type="url" id="inputFacebook" class="form-control" placeholder="Facebook URL">
+        </div>
+        <button type="button" id="updateBtn" class="btn btn-primary w-100">Update Card</button>
+      <div id="successAlert" class="alert alert-success d-none mt-3" role="alert">
+  Card updated successfully!
+  <button type="button" id="resetBtn" class="btn btn-outline-danger w-100 mt-2">Reset</button>
+
+</div>
+
+    </form>
+    </div>
+  </div>
+
+  <script>
+   $(document).ready(function() {
+    function updateCard() {
+        localStorage.setItem("name", $("#inputName").val());
+localStorage.setItem("title", $("#inputTitle").val());
+// Repeat for other fields...
+
+        $("#successAlert").removeClass("d-none").hide().fadeIn().delay(2000).fadeOut();
+
+      $("#name").text($("#inputName").val() || "John Doe");
+      $("#title").text($("#inputTitle").val() || "Software Engineer");
+      $("#phone").text($("#inputPhone").val() || "+91 9876543210");
+      $("#email").text($("#inputEmail").val() || "john@email.com");
+      $("#website").text($("#inputWebsite").val() || "www.johndoe.com");
+
+      $("#linkedin").attr("href", $("#inputLinkedin").val() || "https://linkedin.com");
+      $("#twitter").attr("href", $("#inputTwitter").val() || "https://twitter.com");
+      $("#facebook").attr("href", $("#inputFacebook").val() || "https://facebook.com");
+    }
+
+    // Live update on input
+    $("#cardForm input").on("input", function() {
+      updateCard();
+
+      // Simple validation feedback
+      if ($(this).val().trim() === "") {
+        $(this).addClass("is-invalid").removeClass("is-valid");
+      } else {
+        $(this).addClass("is-valid").removeClass("is-invalid");
+      }
+    });
+
+    // Optional: fallback button update
+    $("#updateBtn").click(updateCard);
+  });
+  </script>
+
+</body>
+</html>
