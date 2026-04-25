@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Noise-Canceling Headphones",
+    "description": "Premium over-ear headphones with active noise cancellation and up to 30 hours of battery life. Perfect for travel and focus.",
+    "price": 299.99,
+    "category": "Electronics",
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Minimalist Mechanical Keyboard",
+    "description": "Tenkeyless mechanical keyboard with tactile switches and customizable RGB backlighting. Sleek aluminum frame.",
+    "price": 129.50,
+    "category": "Accessories",
+    "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=500&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Ergonomic Office Chair",
+    "description": "Fully adjustable mesh office chair with lumbar support, 3D armrests, and a breathable design for all-day comfort.",
+    "price": 245.00,
+    "category": "Furniture",
+    "imageUrl": "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=500&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Smart Fitness Watch",
+    "description": "Water-resistant smartwatch with heart rate monitoring, GPS, and sleep tracking. Compatible with iOS and Android.",
+    "price": 199.00,
+    "category": "Electronics",
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Ceramic Pour-Over Coffee Maker",
+    "description": "Artisan-crafted ceramic dripper for a clean, flavorful cup of coffee. Includes 100 paper filters.",
+    "price": 35.00,
+    "category": "Home",
+    "imageUrl": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=500&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Professional Chef's Knife",
+    "description": "8-inch high-carbon stainless steel chef's knife. Razor-sharp edge and an ergonomic Pakkawood handle.",
+    "price": 89.95,
+    "category": "Kitchen",
+    "imageUrl": "https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?w=500&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Matte Black Water Bottle",
+    "description": "Double-wall vacuum insulated stainless steel water bottle. Keeps drinks cold for 24 hours or hot for 12 hours. 32oz.",
+    "price": 28.50,
+    "category": "Lifestyle",
+    "imageUrl": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Portable Bluetooth Speaker",
+    "description": "Compact, waterproof Bluetooth speaker with 360-degree sound and 15 hours of playtime. Ideal for outdoors.",
+    "price": 75.00,
+    "category": "Electronics",
+    "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&q=80"
+  },
+  {
+    "id": 9,
+    "name": "Linen Throw Blanket",
+    "description": "Soft, breathable 100% European linen throw. Perfect for cozy evenings on the couch or as a bed accent. 50x60 inches.",
+    "price": 65.00,
+    "category": "Home",
+    "imageUrl": "assets/linen_throw_blanket.png"
+  },
+  {
+    "id": 10,
+    "name": "Leather Messenger Bag",
+    "description": "Classic full-grain leather messenger bag with a padded laptop compartment, multiple pockets, and adjustable strap.",
+    "price": 145.00,
+    "category": "Accessories",
+    "imageUrl": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80"
+  },
+  {
+    "id": 11,
+    "name": "Adjustable Dumbbell Set",
+    "description": "Space-saving adjustable dumbbells going from 5 to 50 lbs each with a quick-turn dial system.",
+    "price": 320.00,
+    "category": "Fitness",
+    "imageUrl": "assets/adjustable_dumbbell_set.png"
+  },
+  {
+    "id": 12,
+    "name": "Modern Table Lamp",
+    "description": "Sleek brass table lamp with a frosted glass globe shade. Includes a warm, energy-efficient LED bulb.",
+    "price": 95.00,
+    "category": "Furniture",
+    "imageUrl": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80"
+  }
+]

@@ -1,0 +1,31 @@
+<div class="product-detail-container" *ngIf="product; else loading">
+    <button mat-button routerLink="/products" class="back-button">
+        <mat-icon>arrow_back</mat-icon> Back to Products
+    </button>
+
+    <div class="product-layout">
+        <div class="image-column">
+            <img [src]="product.imageUrl" [alt]="product.name" (error)="onImageError($event)">
+        </div>
+        <div class="info-column">
+            <h1>{{ product.name }}</h1>
+            <p class="category">{{ product.category }}</p>
+            <p class="price">{{ product.price | currency }}</p>
+
+            <div class="description-section">
+                <h3>Description</h3>
+                <p>{{ product.description }}</p>
+            </div>
+
+            <button mat-raised-button color="primary" class="add-to-cart-btn" (click)="addToCart()">
+                <mat-icon>shopping_cart</mat-icon> Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>
+    <div class="loading-state">
+        <p>Loading product details...</p>
+    </div>
+</ng-template>

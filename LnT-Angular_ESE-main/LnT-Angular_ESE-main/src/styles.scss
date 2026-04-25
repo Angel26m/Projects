@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --brand: #1a1a2e;
+  --accent: #e8b86d;
+  --accent2: #c9a05a;
+  --surface: #ffffff;
+  --bg: #f7f5f0;
+  --muted: #6b6b6b;
+  --border: #e2ddd6;
+  --tag-bg: #f0ece4;
+  --tag-text: #5a4f3a;
+  --radius: 14px;
+  --card-radius: 18px;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--brand);
+}
+
+.main-content {
+  min-height: calc(100vh - 60px);
+}

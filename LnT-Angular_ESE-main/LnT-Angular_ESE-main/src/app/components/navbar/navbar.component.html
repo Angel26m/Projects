@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="navbar">
+  <span class="logo" routerLink="/">LUMINARY</span>
+  <span class="nav-sep"></span>
+  <div class="nav-links">
+    <button mat-button routerLink="/products">Products</button>
+    <button mat-button>New Arrivals</button>
+    <button mat-button>Collections</button>
+  </div>
+  <span class="spacer"></span>
+  <button class="cart-icon-btn" mat-button routerLink="/cart" aria-label="Shopping Cart">
+    @if (cartService.cartItems$ | async; as cartItems) {
+      <mat-icon>shopping_bag</mat-icon>
+      Cart
+      <span class="cart-badge" *ngIf="cartItems.length > 0">{{ cartService.getCartCount(cartItems) }}</span>
+    }
+  </button>
+</mat-toolbar>

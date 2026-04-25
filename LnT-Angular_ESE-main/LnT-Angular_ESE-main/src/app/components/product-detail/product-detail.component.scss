@@ -1,0 +1,136 @@
+.product-detail-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 28px 48px;
+
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 13px;
+    font-family: var(--font-body);
+    margin-bottom: 28px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--brand);
+    }
+  }
+
+  .product-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    .image-column {
+      flex: 1;
+
+      img {
+        width: 100%;
+        max-height: 480px;
+        object-fit: cover;
+        border-radius: var(--card-radius);
+        border: 1px solid var(--border);
+      }
+    }
+
+    .info-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .category-badge {
+        display: inline-block;
+        background: var(--tag-bg);
+        color: var(--tag-text);
+        font-size: 11px;
+        font-weight: 500;
+        padding: 4px 10px;
+        border-radius: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        font-family: var(--font-display);
+        font-size: 28px;
+        font-weight: 600;
+        color: var(--brand);
+        line-height: 1.25;
+        margin: 0 0 16px;
+      }
+
+      .price {
+        font-family: var(--font-display);
+        font-size: 26px;
+        font-weight: 600;
+        color: var(--brand);
+        margin-bottom: 28px;
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--border);
+        margin-bottom: 24px;
+      }
+
+      .description-section {
+        margin-bottom: 32px;
+
+        h3 {
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--muted);
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.7;
+          color: #444;
+          font-weight: 300;
+        }
+      }
+
+      .add-to-cart-btn {
+        background: var(--brand);
+        color: var(--accent);
+        font-family: var(--font-body);
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 12px;
+        padding: 14px 32px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: auto;
+        align-self: flex-start;
+        transition: background 0.15s;
+
+        &:hover {
+          background: #2d2d4e;
+        }
+      }
+    }
+  }
+}
+
+.loading-state {
+  text-align: center;
+  padding: 80px;
+  color: var(--muted);
+  font-size: 14px;
+}
